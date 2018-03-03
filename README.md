@@ -8,7 +8,7 @@ _Quarto_ je igra na tabli koju je 1991. godine izmislio švajcarski matematičar
 	
 ![_gm_](/gallery/menu.png)
 
-	Biranje režima (_mod_-a) igre.
+	Biranje režima ( _mod_ -a) igre.
 	
 ![_gm1_](/gallery/mode.png)
 
