@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B50C825-0448-4A39-BA1B-DA58FBC009D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSQuarto</RootNamespace>
+    <AssemblyName>MSQuarto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ControllerDvaIgraca.cs" />
+    <Compile Include="Controller\ControllerJedanIgrac.cs" />
+    <Compile Include="Controller\IController.cs" />
+    <Compile Include="FormaDijalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaDijalog.Designer.cs">
+      <DependentUpon>FormaDijalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIgra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIgra.Designer.cs">
+      <DependentUpon>FormIgra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPocetna.Designer.cs">
+      <DependentUpon>FormPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Figura.cs" />
+    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\Polje.cs" />
+    <Compile Include="Model\Potez.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\ProvidnoDugme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FormaDijalog.resx">
+      <DependentUpon>FormaDijalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIgra.resx">
+      <DependentUpon>FormIgra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPocetna.resx">
+      <DependentUpon>FormPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugme1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugme1Pr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugme1Tr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugme2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugme2Pr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugme2Tr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura0C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura1C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura2C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura3C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura4C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura5C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura6C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura7C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura8C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura9C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura10C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura11C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura12C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura13C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura14C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura15C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figuraTr15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kursor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeAbout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeAboutPr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeIzlaz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeIzlazPr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeNovaIgra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeNovaIgraPr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeOpcije.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeOpcijePr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeUputstva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeUputstvaPr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabla_v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabla2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kursor0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glavna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeOdustani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmeOdustaniPr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmePrihvati.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dugmePrihvatiPr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dijalog1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabla.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
